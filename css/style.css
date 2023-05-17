@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+
+
+.encabezado {
+    
+   
+	background-color: rgb(143, 143, 140);
+	top: 0px;
+     margin:0;
+   
+    
+    
+	
+}
+
+header ul{
+    display: flex;
+    justify-content: end;
+   margin-top: 5px;
+
+}
+.navbar{
+    color: black;
+    margin: 0px 10px 10px 10px;
+}
+
+
+       
+   
+
+.logo{
+    background-color: rgb(143, 143, 140);
+}
+
+
+      
+
+    
+    
+
+.inicio {
+    
+    padding: 10px;
+    background-image: url(../asset/inicio.jpeg);
+    height: 90vh;
+     background-position: 40%;   
+     overflow: hidden;  
+   
+           
+     
+}
+
+
+.inicio h1{
+    font-size: 2.5rem; 
+	text-align: center;
+   	background-color: rgba(255,255,255, 0.7);
+	margin-top: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.inicio p {
+    font-size: 1.8rem; 
+	text-align: center;
+    text-decoration:underline; 
+	background-color: rgba(255,255,255, 0.7);
+	padding: 40px;
+    font-family: Arial, Helvetica, sans-serif; 
+   
+
+}
+
+
+footer{
+    display: flex;
+    background-color: rgb(143, 143, 140);
+     
+      
+
+}
+section{
+    text-align:center;
+
+         
+}
+
+.redes{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 10px;
+    line-height: 40px;
+
+}
+
+.sede {
+    text-align:center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
+    line-height: 15%;
+
+    
+}
+
+
+.sedeCentral{
+ color: white;
+ font-weight:bold;
+ line-height: 40%;
+
+
+    
+}
+.paginas{
+    background-color: rgb(143, 143, 140);
+}
+.nuestraHistoria{
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    text-decoration: solid;
+    padding-bottom: 40px;
+
+
+}
+.historia{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+    margin-right: 150px;
+    margin-bottom: 50px;
+    padding-top: 50px ;
+    
+}
+.clientes{
+    padding-top: 30px;
+}
+.clientes h2{
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    text-decoration: solid;
+    padding-bottom: 40px;
+   
+    
+
+}
+.clientes img{
+    padding-top: 50px;
+    padding-bottom: 200px;
+    margin-left: 130px;
+    
+   
+} 
+.clientesPrin{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.8fr 2fr 1fr;
+   
+}
+.clientesPrin footer{
+    
+    display: grid;    
+    grid-template-columns: repeat(2 20%);
+
+    
+}
+.clientesPrin footer section{
+    display: flex;
+    justify-content: end;
+}
+.clientesPrin footer .redes{
+   
+    
+}
+
+.contacto{
+    padding-top: 60px;
+    
+    
+}
+.contacto {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-decoration: solid;
+   
+    
+  
+
+}
+.datos{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+    margin-right: 150px;
+    margin-bottom: 50px;
+    padding-top: 50px ;
+
+}
+.formulario{
+    margin-left: 300px;
+}
+
+.mapa{
+    margin-left: 300px;
+    padding-top: 100px;
+}
+
+.consultoria{
+    padding: 50px;
+    text-align: center;
+    
+}
+.tercerizacion{
+    padding: 50px;
+    text-align: center
+}
+.kpi{
+    padding: 50px;
+    text-align: center;
+}
+.capacitaciones{
+    padding: 50px;
+    text-align: center
+}
+main div h2{
+    color: black;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: xx-large;
+     padding-bottom: 30px;
+   
+
+}
+main div p{
+    padding-bottom: 20px;
+
+}
+.servicios{
+    
+    
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 25%);
+  
+
+}
+
+@media screen and (min-width:600px) {
+
+    .servicios{
+    
+    
+    
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, 50%);
+           
+    
+    }
+
+}
+.service footer{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 50%);
+}
+.service footer section{
+    padding-top: 50px;
+    padding-left: 150px;
+}
+
+.principal{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.8fr 2fr 2fr 1fr;
+
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main"
+    "footer footer sede"
+   
+}
+
+.principal header{
+    grid-area: header;
+}
+.principal main{
+    grid-area: main;
+}
+.principal footer{
+    grid-area: footer;
+    
+}
+.principal section div{
+    grid-area: sede;
+    background-color: rgb(143, 143, 140) ;
+    padding-top: 40px;
+   
+}
+.principal section{
+    background-color: rgb(143, 143, 140);
+}
+
+.laEmpresa{
+    height: 700px;
+    display: grid;
+    grid-template-columns: 100vh;
+    grid-template-rows: 0.8fr 3fr 0.8fr;
+
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer sede"
+  
+}
+
+.laEmpresa header{
+    grid-area: header;
+}
+.laEmpresa main{
+    grid-area: main;
+    
+}
+.laEmpresa footer{
+    grid-area: footer;
+    padding: 10px;
+       
+}
+.laEmpresa section div{
+    height: 150px;
+    grid-area: sede;
+
+    background-color: rgb(143, 143, 140) ;
+    padding-top: 50px;
+    padding-right: 50px;
+
+}
+
+
+  
+
+
+
