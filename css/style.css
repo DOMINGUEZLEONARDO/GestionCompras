@@ -7,16 +7,9 @@
 
 
 
-/* .encabezado {
-    
-   
-	background-color: rgb(143, 143, 140);
-	top: 0px;
-     margin:0px;
-   
-    
-    
-} */
+.encabezado{
+    margin-bottom: 15px;
+}
 
 header div img{
     margin: 5px 20px;
@@ -55,12 +48,16 @@ header nav{
 
 @media (max-width: 600px){ 
 
+    
+    
+
     #opciones{
        
        position: static;
        background-color:  rgb(143, 143, 140);
        font-size: small;
        text-align: center;
+       
              
     }
    
@@ -164,49 +161,36 @@ section{
 .historia{
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 40px;
-    margin-right: 150px;
-    margin-bottom: 50px;
-    padding-top: 50px ;
+    margin: 20px;
+    
     
 }
 .clientes{
     padding-top: 30px;
 }
-.clientes h2{
-    color: black;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:xx-large;
-    text-decoration: solid;
-    padding-bottom: 40px;
-   
-    
 
-}
-.clientes img{
-    padding-top: 50px;
-    padding-bottom: 200px;
-    margin-left: 130px;
-    
-   
-} 
-.clientesPrin{
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 0.8fr 2fr 1fr;
-   
-}
-.clientesPrin footer{
-    
-    display: grid;    
-    grid-template-columns: repeat(2 20%);
 
-    
-}
-.clientesPrin footer section{
-    display: flex;
-    justify-content: end;
+
+@media screen and (min-width:600px){
+    .pagContacto .formulario{
+        display: flex;
+        justify-content: center;
+    }
+
+    .pagContacto .mapa{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+   .pagContacto footer{
+     width: 600px;
+   }
+    .pagContacto section{
+        display: flex;
+        justify-content: end;    
+        margin-top: 30px;    
+        
+    }
 }
 
 .contacto{
@@ -232,14 +216,8 @@ section{
     padding-top: 50px ;
 
 }
-.formulario{
-    margin-left: 300px;
-}
 
-.mapa{
-    margin-left: 300px;
-    padding-top: 100px;
-}
+
 
 .consultoria{
     padding: 50px;
@@ -340,10 +318,11 @@ main div p{
 }
 
 .laEmpresa{
-    height: 700px;
+    height: 600px;
     display: grid;
-    grid-template-columns: 100vh;
-    grid-template-rows: 0.8fr 3fr 0.8fr;
+    grid-template-columns: auto;
+    grid-template-rows: 0.4fr 3fr 0.8fr;
+
 
     grid-template-areas: 
     "header header header"
@@ -354,9 +333,11 @@ main div p{
 
 .laEmpresa header{
     grid-area: header;
+    
 }
 .laEmpresa main{
     grid-area: main;
+    
     
 }
 .laEmpresa footer{
@@ -374,8 +355,78 @@ main div p{
 
 }
 
+.laEmpresa .imagen{
+    
+    display: flex;
+    justify-content: center;
+}
 
-  
+.laEmpresa .imagen-uno{
+    display: flex;
+    justify-content: center;
+}
+.laEmpresa .imagen{
+    display: none;
+    
+}
+    
+@media screen and (min-width:600px) {
+
+.laEmpresa .historia{
+    text-align: center;
+
+}
+.laEmpresa .nuestraHistoria{
+    text-align: center;
+}
+.laEmpresa .imagen{
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+.laEmpresa .imagen-uno{
+    display: none;
+}
+   
+
+}
+
+
+.clientes h2{
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    text-decoration: solid;
+    padding-bottom: 40px;
+   
+    
+
+}
+.clientes img{
+    padding-top: 50px;
+    padding-bottom: 200px;
+    margin-left: 130px;
+    
+   
+} 
+.clientesPrin{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.4fr 2fr 2fr;
+    
+   
+}
+
+
+ .clientesPrin footer section .sede{
+    align-items: end;
+    
+    
+} 
+
+
 
 
 
