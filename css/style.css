@@ -1,432 +1,315 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+header {
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  height: 50px;
+  margin-bottom: 15px; }
+  header div img {
+    margin: 5px  20px; }
+  header nav {
+    margin: 5px; }
+    header nav .nav-item {
+      text-align: center;
+      justify-content: center; }
+    header nav .menu {
+      display: flex;
+      justify-content: center; }
+    header nav .nav-bar {
+      color: black;
+      padding: 8px 16px; }
 
-
-.encabezado{
-    margin-bottom: 15px;
-}
-
-header div img{
-    margin: 5px 20px;
-    padding-top: 5px;
-}
- header{
+@media (max-width: 600px) {
+  #opciones {
     display: flex;
-    justify-content: start;
-    height: 50px;
-    
-}
-
-.nav-item{
+    position: relative;
+    font-size: small;
     text-align: center;
-    justify-content: center;
-    
-}
+    background-color: #8f8f8c; }
+  .principal .caba {
+    text-align: inherit;
+    line-height: 1rem; } }
 
-header nav{
-    margin: 5px;
-    
-}
-
-.menu{
-    display: flex;
-    justify-content: center;
-
-}
-.nav-bar{
-    
+section {
+  display: flex;
+  text-align: center;
+  justify-content: end;
+  background-color: #8f8f8c; }
+  section .sede {
+    text-align: center;
     color: black;
-    padding: 8px 16px; 
-
-}
-
-
-@media (max-width: 600px){ 
-
-    
-    
-
-    #opciones{
-       
-       position: static;
-       background-color:  rgb(143, 143, 140);
-       font-size: small;
-       text-align: center;
-       
-             
-    }
-   
-   .principal .caba{
-    font-size: x-small;
-   }
- }
-
-   
-
-    
-    
-
-.inicio {
-    
-    padding: 10px;
-    background-image: url(../asset/inicio.jpeg);
-    height: 90vh;
-     background-position: 40%;   
-     overflow: hidden;  
-   
-               
-}
-
-
-.inicio h1{
-    font-size: 2.5rem; 
-	text-align: center;
-   	background-color: rgba(255,255,255, 0.7);
-	margin-top: 100px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-}
-.inicio p {
-    font-size: 1.8rem; 
-	text-align: center;
-    text-decoration:underline; 
-	background-color: rgba(255,255,255, 0.7);
-	padding: 40px;
-    font-family: Arial, Helvetica, sans-serif; 
-   
+    font-size: small;
+    line-height: 40%;
+    padding-top: 40px;
+    padding-right: 20px; }
+    section .sede .sedeCentral {
+      color: wheat;
+      font-weight: bold;
+      line-height: 40%;
+      padding: 0; }
 
-}
-
-
-footer{
-    display: flex;
-    background-color: rgb(143, 143, 140);
-     
-      
-
-}
-section{
-    text-align:center;
-
-         
-}
-
-.redes{
+footer {
+  display: flex;
+  background-color: #8f8f8c; }
+  footer .redes {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: small;
     text-align: left;
     padding-top: 30px;
-    padding-left: 10px;
-    line-height: 40px;
+    padding-left: 10 px;
+    line-height: 40px; }
 
-}
+/* ESTILOS PAGINA PRINCIPAL*/
+.principal {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.4fr 2fr 1fr 1fr;
+  grid-template-areas: "header header header" "main main main" "main main main" "footer footer sede"; }
 
-.sede {
-    text-align:center;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:small;
-    line-height: 15%;
+.principal header {
+  grid-area: header; }
 
-    
-}
+.principal main {
+  grid-area: main; }
 
+.principal footer {
+  grid-area: footer;
+  padding-left: 15px; }
 
-.sedeCentral{
- color: white;
- font-weight:bold;
- line-height: 40%;
+.principal section {
+  grid-area: sede;
+  padding-top: 10px; }
 
-
-    
-}
-.paginas{
-    background-color: rgb(143, 143, 140);
-}
-.nuestraHistoria{
-    color: black;
+main .inicio {
+  padding: 10px;
+  background-image: url(../asset/inicio.jpeg);
+  height: 90vh;
+  background-position: 40%;
+  overflow: hidden; }
+  main .inicio h1 {
+    font-size: 2.5rem;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:xx-large;
-    text-decoration: solid;
-    padding-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.699);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 70px; }
+  main .inicio p {
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.699);
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif; }
 
+/*Estilos pagina la empresa*/
+@media (max-width: 600px) {
+  .paginas {
+    padding-top: 30px; }
+  .laEmpresa .fclientes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 150px; }
+    .laEmpresa .fclientes p {
+      width: 150px; }
+  .laEmpresa section .sede {
+    text-align: left;
+    width: 100px; } }
 
-}
-.historia{
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
-    
-    
-}
-.clientes{
-    padding-top: 30px;
-}
-
-
-
-@media screen and (min-width:600px){
-    .pagContacto .formulario{
-        display: flex;
-        justify-content: center;
-    }
-
-    .pagContacto .mapa{
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-   .pagContacto footer{
-     width: 600px;
-   }
-    .pagContacto section{
-        display: flex;
-        justify-content: end;    
-        margin-top: 30px;    
-        
-    }
-}
-
-.contacto{
-    padding-top: 60px;
-    
-    
-}
-.contacto {
+.laEmpresa {
+  background-color: #8f8f8c;
+  height: 600px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.4fr 2fr 1fr 1fr;
+  grid-template-areas: "header header header" "main  main  main" "footer footer section"; }
+  .laEmpresa .nuestraHistoria {
     color: black;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
     text-decoration: solid;
-   
-
-}
-.datos{
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 40px;
-    margin-right: 150px;
-    margin-bottom: 50px;
-    padding-top: 50px ;
-
-}
-
-
-
-.consultoria{
-    padding: 50px;
-    text-align: center;
-    
-}
-.tercerizacion{
-    padding: 50px;
-    text-align: center
-}
-.kpi{
-    padding: 50px;
-    text-align: center;
-}
-.capacitaciones{
-    padding: 50px;
-    text-align: center
-}
-main div h2{
-    color: black;
-     font-family: 'Times New Roman', Times, serif;
-     font-size: xx-large;
-     padding-bottom: 30px;
-   
-
-}
-main div p{
-    padding-bottom: 20px;
-
-}
-.servicios{
-    
-    
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 25%);
-  
-
-}
-
-@media screen and (min-width:600px) {
-
-    .servicios{
-    
-    
-    
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: repeat(2, 50%);
-           
-    
-    }
-
-}
-.service footer{
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(2, 50%);
-}
-.service footer section{
-    padding-top: 50px;
-    padding-left: 150px;
-}
-
-.principal{
-    
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 0.4fr 2fr 2fr 1fr;
-
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "main main main"
-    "footer footer sede"
-   
-}
-
-.principal header{
-    grid-area: header;
-}
-.principal main{
-    grid-area: main;
-}
-.principal footer{
-    grid-area: footer;
-    
-}
-.principal section div{
-    grid-area: sede;
-    background-color: rgb(143, 143, 140) ;
-    padding-top: 40px;
-   
-}
-.principal section{
-    background-color: rgb(143, 143, 140);
-}
-
-.laEmpresa{
-    height: 600px;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 0.4fr 3fr 0.8fr;
-
-
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer sede"
-  
-}
-
-.laEmpresa header{
-    grid-area: header;
-    
-}
-.laEmpresa main{
-    grid-area: main;
-    
-    
-}
-.laEmpresa footer{
-    grid-area: footer;
-    padding: 10px;
-       
-}
-.laEmpresa section div{
-    height: 150px;
-    grid-area: sede;
-
-    background-color: rgb(143, 143, 140) ;
-    padding-top: 50px;
-    padding-right: 50px;
-
-}
-
-.laEmpresa .imagen{
-    
+    padding-bottom: 40px; }
+    .laEmpresa .nuestraHistoria .textoHistoria {
+      color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px; }
+  .laEmpresa .imagen {
     display: flex;
     justify-content: center;
-}
-
-.laEmpresa .imagen-uno{
+    margin: 70px; }
+  .laEmpresa .imagen-uno {
     display: flex;
-    justify-content: center;
-}
-.laEmpresa .imagen{
-    display: none;
-    
-}
-    
-@media screen and (min-width:600px) {
+    justify-content: center; }
+  .laEmpresa .imagen {
+    display: none; }
 
-.laEmpresa .historia{
-    text-align: center;
+.laEmpresa header {
+  grid-area: header; }
 
-}
-.laEmpresa .nuestraHistoria{
-    text-align: center;
-}
-.laEmpresa .imagen{
+.laEmpresa main {
+  grid-area: main; }
+
+.laEmpresa footer {
+  grid-area: footer;
+  padding: 20px;
+  line-height: 40%;
+  width: 200px; }
+
+.laEmpresa section {
+  grid-area: section;
+  padding-top: 20px;
+  padding-left: 250px; }
+
+@media screen and (min-width: 600px) {
+  .laEmpresa .historia {
+    text-align: center; }
+  .laEmpresa .nuestraHistoria {
+    text-align: center; }
+  .laEmpresa .imagen {
     display: block;
     display: flex;
-    justify-content: center;
-}
-.laEmpresa .imagen-uno{
-    display: none;
-}
-   
+    justify-content: center; }
+  .laEmpresa .imagen-uno {
+    display: none; } }
 
-}
+/* estilos Pagina Servicios */
+.service main {
+  background-color: #8f8f8c; }
 
+.servicios {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 25%); }
+  .servicios .consultoria {
+    padding: 50px;
+    text-align: center; }
+  .servicios .tercerizacion {
+    padding: 50px;
+    text-align: center; }
+  .servicios .kpi {
+    padding: 50px;
+    text-align: center; }
+  .servicios .capacitaciones {
+    padding: 50px;
+    text-align: center; }
+  .servicios .textoServicios {
+    text-align: center;
+    margin: 10px; }
+  .servicios main div h2 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    padding-bottom: 30px; }
 
-.clientes h2{
+.service section .sede {
+  text-align: center;
+  width: 100px;
+  padding-left: 20px; }
+  .service section .sede .caba {
+    line-height: 1rem; }
+
+@media screen and (min-width: 600px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 50%); } }
+
+.service footer {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat 2, 50%; }
+
+.service section {
+  padding-top: 0px;
+  padding-left: 100px; }
+
+.service footer section div {
+  width: 200px; }
+
+/*Estilos pagina clientes*/
+.clientesPrin {
+  height: 600px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.4fr 2fr 2fr;
+  background-color: #8f8f8c; }
+  .clientesPrin .clientes {
+    padding: 40px;
+    padding-bottom: 80px; }
+  .clientesPrin .fclientes {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px; }
+  .clientesPrin .sede {
+    padding-top: 15px;
+    align-items: end;
+    padding-right: 20px;
+    line-height: 40%;
+    text-align: center; }
+    .clientesPrin .sede .sedeCentral {
+      color: white;
+      text-align: center;
+      text-decoration: solid; }
+  .clientesPrin .fclientes {
+    display: flex;
+    justify-content: space-between;
+    height: 600px; }
+  .clientesPrin .clientes img {
+    padding-top: 50px;
+    padding-bottom: 200px;
+    padding-left: 250px; }
+  .clientesPrin .clientes h2 {
     color: black;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size:xx-large;
+    font-size: xx-large;
     text-decoration: solid;
-    padding-bottom: 40px;
-   
-    
+    padding-bottom: 40px; }
 
-}
-.clientes img{
-    padding-top: 50px;
-    padding-bottom: 200px;
-    margin-left: 130px;
-    
-   
-} 
-.clientesPrin{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 0.4fr 2fr 2fr;
-    
-   
-}
+/* Estilos Pagina contacto*/
+.pagContacto {
+  background-color: #8f8f8c; }
+  .pagContacto .fclientes {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 20px; }
+    .pagContacto .fclientes .sede {
+      line-height: 40%;
+      padding-right: 20px;
+      text-align: center; }
+      .pagContacto .fclientes .sede .sedeCentral {
+        color: white;
+        text-decoration: solid; }
 
+@media screen and (min-width: 600px) {
+  .pagContacto .mapa {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-right: 50px; }
+  .pagContacto .formulario {
+    display: flex;
+    justify-content: center; } }
 
- .clientesPrin footer section .sede{
-    align-items: end;
-    
-    
-} 
+.pagContacto .datos {
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 40px;
+  margin-right: 150px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  text-align: center; }
 
-
-
-
-
+.pagContacto .contacto {
+  padding-top: 60px;
+  color: black;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  text-decoration: solid; }
