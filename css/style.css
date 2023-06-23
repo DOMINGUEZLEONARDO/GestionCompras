@@ -7,8 +7,7 @@ header {
   background-color: white;
   display: flex;
   justify-content: start;
-  height: 50px;
-  margin-bottom: 15px; }
+  padding: 0px; }
   header div img {
     margin: 5px  20px; }
   header nav {
@@ -23,11 +22,23 @@ header {
       color: black;
       padding: 8px 16px; }
 
+.laEmpresa .nuestraHistoria, .servicios main div h2, .clientesPrin .clientes h2, .pagContacto .contacto {
+  padding-top: 60px;
+  color: #180f0f;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: xx-large;
+  text-decoration: solid; }
+
 @media (max-width: 600px) {
   #opciones {
+    justify-content: start;
     font-size: small;
-    text-align: center;
     background-color: #8f8f8c; }
+  .nav-pills {
+    display: block;
+    background-color: #b6b4b1;
+    position: fixed; }
   .principal .caba {
     text-align: inherit;
     line-height: 1rem; } }
@@ -46,7 +57,7 @@ section {
     padding-top: 40px;
     padding-right: 20px; }
     section .sede .sedeCentral {
-      color: wheat;
+      color: white;
       font-weight: bold;
       line-height: 40%;
       padding: 0; }
@@ -107,10 +118,10 @@ main .inicio {
 @media (max-width: 600px) {
   header {
     padding-left: 30px;
-    padding-bottom: 30px; }
+    padding-top: 20px; }
   .textoHistoria {
     width: 350px;
-    padding-left: 40px;
+    padding: 10px;
     margin-left: 30px; }
   .laEmpresa .fclientes {
     display: flex;
@@ -120,13 +131,20 @@ main .inicio {
     .laEmpresa .fclientes p {
       width: 150px; }
   .laEmpresa section {
-    width: 300px;
+    width: 200px;
     padding: 0px; }
     .laEmpresa section .sede {
-      width: 300px;
-      margin-right: 10px; }
+      width: 250px;
+      padding-left: 40px; }
+      .laEmpresa section .sede .caba {
+        width: 180px;
+        line-height: 15px; }
   .laEmpresa .redes {
-    margin-left: 40px; } }
+    margin-left: 40px;
+    line-height: 20px; }
+  .laEmpresa .caba {
+    width: 200px;
+    gap: 1rem; } }
 
 .laEmpresa {
   background-color: #8f8f8c;
@@ -135,24 +153,18 @@ main .inicio {
   grid-template-columns: auto;
   grid-template-rows: 0.4fr 2fr 1fr 1fr;
   grid-template-areas: "header header header" "main  main  main" "footer footer section"; }
-  .laEmpresa .nuestraHistoria {
+  .laEmpresa .nuestraHistoria .textoHistoria {
     color: black;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: xx-large;
-    text-decoration: solid;
-    padding-bottom: 40px; }
-    .laEmpresa .nuestraHistoria .textoHistoria {
-      color: black;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 20px; }
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px; }
   .laEmpresa .imagen {
     display: flex;
     justify-content: center;
     margin: 70px; }
   .laEmpresa .imagen-uno {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding-right: 20px; }
   .laEmpresa .imagen {
     display: none; }
 
@@ -170,7 +182,8 @@ main .inicio {
 
 .laEmpresa section {
   grid-area: section;
-  padding-top: 20px; }
+  padding-top: 20px;
+  width: 250px; }
 
 @media screen and (min-width: 600px) {
   .laEmpresa .historia {
@@ -223,11 +236,6 @@ main .inicio {
   .servicios .textoServicios {
     text-align: center;
     margin: 10px; }
-  .servicios main div h2 {
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: xx-large;
-    padding-bottom: 30px; }
 
 .service section .sede {
   text-align: center;
@@ -285,28 +293,21 @@ main .inicio {
   .clientesPrin .clientes img {
     margin: 30px;
     margin-top: 80px; }
-  .clientesPrin .clientes h2 {
-    color: black;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: xx-large;
-    text-decoration: solid;
-    padding-bottom: 40px; }
 
 @media screen and (max-width: 600px) {
   .clientesPrin main div .hidro {
     padding-left: 20px;
+    padding-bottom: 0px;
     margin: 30px;
-    margin-top: 60px;
-    padding-bottom: 0px; }
+    margin-top: 60px; }
   .clientesPrin main div .it {
     padding-left: 20px;
     padding-bottom: 0px;
     margin: 30px; }
   .clientesPrin main div .coca {
     padding-left: 20px;
-    margin: 30px;
-    padding-bottom: 0px; }
+    padding-bottom: 0px;
+    margin: 30px; }
   .clientesPrin main div .osde {
     display: none; }
   .clientesPrin main div .rossi {
@@ -317,16 +318,11 @@ main .inicio {
     display: none; }
   .clientesPrin main div .megatlon {
     display: none; }
-  .clientesPrin main .clienteTitulo {
-    width: 300px;
-    text-align: center;
-    padding: 0;
-    margin: 0; }
   .clientesPrin footer div .caba {
     text-align: center;
     line-height: 1rem; }
   .clientesPrin footer div .redes {
-    color: aqua;
+    color: #000505;
     height: 200px; }
   .clientesPrin .sede {
     padding-top: 50px; } }
@@ -366,10 +362,10 @@ main .inicio {
 
 @media screen and (max-width: 600px) {
   .pagContacto main .datos p {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 350px;
     text-align: start;
-    padding-left: 20px; }
+    padding: 15px; }
   .pagContacto main div .form {
     display: none; }
   .pagContacto main div .imgContacto {
@@ -401,11 +397,3 @@ main .inicio {
   margin-bottom: 50px;
   padding-top: 50px;
   text-align: center; }
-
-.pagContacto .contacto {
-  padding-top: 60px;
-  color: black;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: xx-large;
-  text-decoration: solid; }

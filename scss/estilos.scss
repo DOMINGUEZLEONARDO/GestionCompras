@@ -1,54 +1,41 @@
 @import "extra/vars";
+@import "extra/mixin.scss";
+@import "extra/reset";
+@import "extra/header";
+@import "extra/extend";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-header{
-    background-color: white;
-    display: flex;
-    justify-content: start;
-    height: 50px;
-    margin-bottom: 15px;
-    div img{
-        margin:  5px  20px;
-    }
+
+
 
  
-    nav{
-        margin: 5px;
-   
-    .nav-item{
-        text-align: center;
-        justify-content: center;
-    }
-    .menu{
-        display: flex;
-        justify-content: center;
-
-    }
-    .nav-bar{
-        color: black;
-        padding: 8px 16px;
-    }
-    }
 
 
-}
-@media (max-width:600px){
+@media (max-width:600px){    
     #opciones{
         
+        justify-content: start;
         font-size: small;
-        text-align: center;
-              
         background-color:$color-principal;
-        
+           
+       
+
+              
+                
 
         
 
     }
+    
+        
+     .nav-pills{
+                display: block;
+                background-color:rgb(182, 180, 177);
+                position:fixed;                
+
+    }            
+        
+
     .principal .caba{
         text-align: inherit;
         line-height:1rem;
@@ -70,7 +57,7 @@ section{
         padding-top: 40px;
         padding-right: 20px;
         .sedeCentral{
-            color: wheat;
+            color: white;
             font-weight: bold;
             line-height: 40%;
             padding: 0;
@@ -149,6 +136,7 @@ main .inicio{
         background-color: $color-fondoh1;
         padding: 30px;
         font-family: Arial, Helvetica, sans-serif;
+
     }
 }
 
@@ -157,7 +145,7 @@ main .inicio{
 @media (max-width:600px){
     header{
        padding-left: 30px;
-       padding-bottom: 30px;
+       padding-top: 20px;
        
        
     }
@@ -165,7 +153,7 @@ main .inicio{
     
     .textoHistoria{
         width: 350px;
-        padding-left: 40px;
+        padding: 10px;
         margin-left: 30px;
     }
  
@@ -188,14 +176,21 @@ main .inicio{
     }
     .laEmpresa{
         section{
-            width: 300px;
+            width: 200px;
             padding: 0px;
             .sede{
                 
                 
-                width: 300px;
-                margin-right: 10px;
+                width: 250px;
+                padding-left: 40px;
                 
+              
+                
+                .caba{
+                    width: 180px;
+                    line-height: 15px;
+                    
+                }
                  
                
             }
@@ -203,8 +198,14 @@ main .inicio{
         }
         .redes{
             margin-left: 40px;
+            line-height: 20px;
 
         }
+     .caba{
+        width: 200px;
+        gap: 1rem;
+
+     }   
     }
     
 }
@@ -223,12 +224,9 @@ main .inicio{
     "footer footer section";
 
     .nuestraHistoria{
-        color: black;
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: xx-large;
-        text-decoration: solid;
-        padding-bottom: 40px;
+        @extend %formatoTitulo;
+        
+
 
         .textoHistoria{
             color: black;
@@ -248,6 +246,8 @@ main .inicio{
     .imagen-uno{
         display: flex;
         justify-content: center;
+        padding-right: 20px;
+
         
     }
     .imagen{
@@ -273,6 +273,8 @@ main .inicio{
 .laEmpresa section{
     grid-area: section;
    padding-top: 20px;
+   width: 250px;
+ 
    
   
     
@@ -378,10 +380,8 @@ main .inicio{
             
             div{
                 h2{
-                    color: black;
-                    font-family: 'Times New Roman', Times, serif;
-                    font-size: xx-large;
-                    padding-bottom: 30px;              
+
+                    @extend %formatoTitulo;             
                     
                     
                     
@@ -507,12 +507,7 @@ main .inicio{
 
         
         h2{
-            color:black;
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: xx-large;
-            text-decoration: solid;
-            padding-bottom: 40px;
+           @extend %formatoTitulo;
 
         }
     }
@@ -526,22 +521,18 @@ main .inicio{
             main{
                 div{
                     .hidro{
-                        padding-left: 20px;
-                        margin: 30px;
+                        @include formatoImg;
                         margin-top: 60px;
-                        padding-bottom: 0px;
 
                     }
                     .it{
-                        padding-left: 20px;
-                        padding-bottom: 0px;
-                        margin: 30px;
+                        @include formatoImg;
+
 
                     }
                     .coca{
-                        padding-left: 20px;
-                        margin: 30px;
-                        padding-bottom: 0px;
+                        @include formatoImg;
+                        
 
 
                     }
@@ -580,25 +571,7 @@ main .inicio{
        
       
     
-    .clientesPrin{
-         
-        main{
-            .clienteTitulo{
-            
-                width: 300px;
-                text-align: center;
-                padding: 0;
-                margin: 0;
-                
-
-            }
-       
-     
-        }
-
-       
-
-    }
+    
     .clientesPrin{
         footer{
             div{
@@ -608,7 +581,7 @@ main .inicio{
                 }
                 
                 .redes{
-                    color: aqua;
+                    color: rgb(0, 5, 5);
 
                     height:200px ;
                 }
@@ -692,10 +665,14 @@ main .inicio{
             
             .datos{
                 p{
-                    height: 300px;
-                    width: 300px;
+                    height: 200px;
+                    width: 350px;
                     text-align: start;
-                    padding-left: 20px;
+                    padding: 15px;
+                    
+                    
+                    
+
                 }
                     
                     
@@ -764,12 +741,7 @@ main .inicio{
 
     }
     .contacto{
-        padding-top: 60px;
-        color: black;
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: xx-large;
-        text-decoration: solid;
+      @extend %formatoTitulo;
     }
 }
 
