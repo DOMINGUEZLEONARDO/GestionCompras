@@ -39,12 +39,11 @@ header{
 }
 @media (max-width:600px){
     #opciones{
-        display:flex;
-        position: relative;
+        
         font-size: small;
         text-align: center;
               
-        background-color: $color-principal;
+        background-color:$color-principal;
         
 
         
@@ -156,10 +155,22 @@ main .inicio{
 /*Estilos pagina la empresa*/
 
 @media (max-width:600px){
-    .paginas{
-        padding-top: 30px;
-
+    header{
+       padding-left: 30px;
+       padding-bottom: 30px;
+       
+       
     }
+    
+    
+    .textoHistoria{
+        width: 350px;
+        padding-left: 40px;
+        margin-left: 30px;
+    }
+ 
+        
+    
     
    
     .laEmpresa{
@@ -177,12 +188,22 @@ main .inicio{
     }
     .laEmpresa{
         section{
+            width: 300px;
+            padding: 0px;
             .sede{
                 
-                text-align: left;
-                width: 100px;
+                
+                width: 300px;
+                margin-right: 10px;
+                
+                 
                
             }
+     
+        }
+        .redes{
+            margin-left: 40px;
+
         }
     }
     
@@ -252,7 +273,7 @@ main .inicio{
 .laEmpresa section{
     grid-area: section;
    padding-top: 20px;
-    padding-left: 250px;
+   
   
     
 
@@ -281,10 +302,40 @@ main .inicio{
     
 }
 
+
+
     /* estilos Pagina Servicios */
     .service{
+
         main{
             background-color: $color-principal
+        }
+        footer{
+            
+            .redes{
+                width: 150px;
+                margin-left: 20px;
+            }
+
+            section{
+                padding: 0px;
+                .sede{
+                    padding-top: 30px;
+                    margin: 0px;
+                    width: 250px;
+                   
+                    .caba{
+                        width: 200px;
+                        padding-left: 0px;
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+            }
+
+              
+            
+                
         }
     }
     .servicios{
@@ -347,15 +398,20 @@ main .inicio{
     .service{
 
         section{
+           
             
             .sede{
                 text-align: center;
-                width: 100px;
+                width: 300px;
                 padding-left: 20px;
+                
                 .caba{
 
                     line-height: 1rem;
+                    width: 150px;
+                    
                 }
+               
                     
                 
             }
@@ -438,18 +494,18 @@ main .inicio{
      .fclientes{
         display: flex;
         justify-content: space-between;
-        height: 600px;
         
         
      }
 
     .clientes{
-
         img{
-            padding-top: 50px;
-            padding-bottom: 200px;
-            padding-left: 250px;    
+            margin: 30px;
+            margin-top: 80px;
+            
         }
+
+        
         h2{
             color:black;
             text-align: center;
@@ -462,13 +518,126 @@ main .inicio{
     }
     
 
+    
 
+}
+@media screen and (max-width:600px){ 
+        .clientesPrin{
+            main{
+                div{
+                    .hidro{
+                        padding-left: 20px;
+                        margin: 30px;
+                        margin-top: 60px;
+                        padding-bottom: 0px;
+
+                    }
+                    .it{
+                        padding-left: 20px;
+                        padding-bottom: 0px;
+                        margin: 30px;
+
+                    }
+                    .coca{
+                        padding-left: 20px;
+                        margin: 30px;
+                        padding-bottom: 0px;
+
+
+                    }
+                    .osde{
+                        display: none;
+                    }
+                    .rossi{
+                        display: none;
+                        
+                    }
+                    
+                    .toyota{
+                       display: none;
+                            
+                        
+                    }
+                    .samsung{
+                        display: none;
+                    }
+                    .megatlon{
+                        display: none;
+                    }
+                }
+            
+                
+                
+
+               
+                
+            }
+        }
+    
+  
+        
+        
+       
+      
+    
+    .clientesPrin{
+         
+        main{
+            .clienteTitulo{
+            
+                width: 300px;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+                
+
+            }
+       
+     
+        }
+
+       
+
+    }
+    .clientesPrin{
+        footer{
+            div{
+                .caba{
+                    text-align: center;
+                    line-height: 1rem;
+                }
+                
+                .redes{
+                    color: aqua;
+
+                    height:200px ;
+                }
+            }
+        }
+    }
+
+    
+    .clientesPrin{
+        .sede{
+            padding-top: 50px;
+        }
+    }
+}
+
+    
 
 
 
     
 
-}
+
+
+            
+          
+
+        
+
+
 
 /* Estilos Pagina contacto*/
 
@@ -498,11 +667,85 @@ main .inicio{
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            margin-bottom: 120px;
             padding-right: 50px;
+            height: 300px;
         }
         .formulario{
             display: flex;
             justify-content: center;
+            margin: 80px;
+
+        }
+        .imgContacto{
+            display: none;
+        }
+        .sede{
+            padding-top: 20px;
+            
+        }
+    }
+}
+@media screen and (max-width:600px){
+    .pagContacto{
+        main{
+            
+            .datos{
+                p{
+                    height: 300px;
+                    width: 300px;
+                    text-align: start;
+                    padding-left: 20px;
+                }
+                    
+                    
+
+            }
+
+            
+            div{
+                .form{
+                    display: none;                   
+                 
+
+
+                }
+                .imgContacto{
+                    display: flex;
+                    padding-bottom: 20px;
+                    margin-bottom: 0px;
+
+
+                }
+
+            }
+        }
+       
+        .mapa{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 200px;
+            
+            padding: 20px;
+            padding-left: 20px;            
+            height: 300px;
+        }
+    
+
+
+        .formulario{
+            display: flex;
+            justify-content: center;
+            height: 300px;
+
+        }
+        .sede{
+            padding-top: 50px;
+            .caba{
+                margin: 0px;
+                line-height: 1rem;
+                
+            }
 
         }
     }

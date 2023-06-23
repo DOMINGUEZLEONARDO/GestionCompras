@@ -25,8 +25,6 @@ header {
 
 @media (max-width: 600px) {
   #opciones {
-    display: flex;
-    position: relative;
     font-size: small;
     text-align: center;
     background-color: #8f8f8c; }
@@ -107,8 +105,13 @@ main .inicio {
 
 /*Estilos pagina la empresa*/
 @media (max-width: 600px) {
-  .paginas {
-    padding-top: 30px; }
+  header {
+    padding-left: 30px;
+    padding-bottom: 30px; }
+  .textoHistoria {
+    width: 350px;
+    padding-left: 40px;
+    margin-left: 30px; }
   .laEmpresa .fclientes {
     display: flex;
     justify-content: center;
@@ -116,9 +119,14 @@ main .inicio {
     width: 150px; }
     .laEmpresa .fclientes p {
       width: 150px; }
-  .laEmpresa section .sede {
-    text-align: left;
-    width: 100px; } }
+  .laEmpresa section {
+    width: 300px;
+    padding: 0px; }
+    .laEmpresa section .sede {
+      width: 300px;
+      margin-right: 10px; }
+  .laEmpresa .redes {
+    margin-left: 40px; } }
 
 .laEmpresa {
   background-color: #8f8f8c;
@@ -162,8 +170,7 @@ main .inicio {
 
 .laEmpresa section {
   grid-area: section;
-  padding-top: 20px;
-  padding-left: 250px; }
+  padding-top: 20px; }
 
 @media screen and (min-width: 600px) {
   .laEmpresa .historia {
@@ -180,6 +187,22 @@ main .inicio {
 /* estilos Pagina Servicios */
 .service main {
   background-color: #8f8f8c; }
+
+.service footer .redes {
+  width: 150px;
+  margin-left: 20px; }
+
+.service footer section {
+  padding: 0px; }
+  .service footer section .sede {
+    padding-top: 30px;
+    margin: 0px;
+    width: 250px; }
+    .service footer section .sede .caba {
+      width: 200px;
+      padding-left: 0px;
+      margin: 0;
+      text-align: center; }
 
 .servicios {
   display: grid;
@@ -208,10 +231,11 @@ main .inicio {
 
 .service section .sede {
   text-align: center;
-  width: 100px;
+  width: 300px;
   padding-left: 20px; }
   .service section .sede .caba {
-    line-height: 1rem; }
+    line-height: 1rem;
+    width: 150px; }
 
 @media screen and (min-width: 600px) {
   .servicios {
@@ -257,12 +281,10 @@ main .inicio {
       text-decoration: solid; }
   .clientesPrin .fclientes {
     display: flex;
-    justify-content: space-between;
-    height: 600px; }
+    justify-content: space-between; }
   .clientesPrin .clientes img {
-    padding-top: 50px;
-    padding-bottom: 200px;
-    padding-left: 250px; }
+    margin: 30px;
+    margin-top: 80px; }
   .clientesPrin .clientes h2 {
     color: black;
     text-align: center;
@@ -270,6 +292,44 @@ main .inicio {
     font-size: xx-large;
     text-decoration: solid;
     padding-bottom: 40px; }
+
+@media screen and (max-width: 600px) {
+  .clientesPrin main div .hidro {
+    padding-left: 20px;
+    margin: 30px;
+    margin-top: 60px;
+    padding-bottom: 0px; }
+  .clientesPrin main div .it {
+    padding-left: 20px;
+    padding-bottom: 0px;
+    margin: 30px; }
+  .clientesPrin main div .coca {
+    padding-left: 20px;
+    margin: 30px;
+    padding-bottom: 0px; }
+  .clientesPrin main div .osde {
+    display: none; }
+  .clientesPrin main div .rossi {
+    display: none; }
+  .clientesPrin main div .toyota {
+    display: none; }
+  .clientesPrin main div .samsung {
+    display: none; }
+  .clientesPrin main div .megatlon {
+    display: none; }
+  .clientesPrin main .clienteTitulo {
+    width: 300px;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+  .clientesPrin footer div .caba {
+    text-align: center;
+    line-height: 1rem; }
+  .clientesPrin footer div .redes {
+    color: aqua;
+    height: 200px; }
+  .clientesPrin .sede {
+    padding-top: 50px; } }
 
 /* Estilos Pagina contacto*/
 .pagContacto {
@@ -292,10 +352,46 @@ main .inicio {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    padding-right: 50px; }
+    margin-bottom: 120px;
+    padding-right: 50px;
+    height: 300px; }
   .pagContacto .formulario {
     display: flex;
-    justify-content: center; } }
+    justify-content: center;
+    margin: 80px; }
+  .pagContacto .imgContacto {
+    display: none; }
+  .pagContacto .sede {
+    padding-top: 20px; } }
+
+@media screen and (max-width: 600px) {
+  .pagContacto main .datos p {
+    height: 300px;
+    width: 300px;
+    text-align: start;
+    padding-left: 20px; }
+  .pagContacto main div .form {
+    display: none; }
+  .pagContacto main div .imgContacto {
+    display: flex;
+    padding-bottom: 20px;
+    margin-bottom: 0px; }
+  .pagContacto .mapa {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    padding: 20px;
+    padding-left: 20px;
+    height: 300px; }
+  .pagContacto .formulario {
+    display: flex;
+    justify-content: center;
+    height: 300px; }
+  .pagContacto .sede {
+    padding-top: 50px; }
+    .pagContacto .sede .caba {
+      margin: 0px;
+      line-height: 1rem; } }
 
 .pagContacto .datos {
   color: black;
