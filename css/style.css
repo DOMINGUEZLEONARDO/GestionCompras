@@ -46,7 +46,7 @@ header {
   .nav-pills {
     display: block;
     background-color: #b6b4b1;
-    position: fixed; }
+    position: relative; }
   .principal .caba {
     text-align: inherit;
     line-height: 1rem; } }
