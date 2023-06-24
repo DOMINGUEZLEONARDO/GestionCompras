@@ -30,6 +30,14 @@ header {
   font-size: xx-large;
   text-decoration: solid; }
 
+.principal section .sedeCentral, .laEmpresa section .sedeCentral, .service footer section .sedeCentral {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px; }
+
+.principal section p, .laEmpresa section p, .service footer section .sede .caba, .service footer section .sede .pichincha {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px; }
+
 @media (max-width: 600px) {
   #opciones {
     justify-content: start;
@@ -47,18 +55,14 @@ section {
   display: flex;
   text-align: center;
   justify-content: end;
-  background-color: #8f8f8c;
-   }
+  background-color: #8f8f8c; }
   section .sede {
     text-align: center;
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
     line-height: 40%;
-    padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  }
+    padding-top: 40px; }
     section .sede .sedeCentral {
       color: white;
       font-weight: bold;
@@ -69,7 +73,7 @@ footer {
   display: flex;
   background-color: #8f8f8c; }
   footer .redes {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: small;
     text-align: left;
     padding-top: 30px;
@@ -81,10 +85,7 @@ footer {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 0.4fr 2fr 1fr 1fr;
-  grid-template-areas: "header header header"
- "main main main"
- "main main main"
- "footer footer sede"; }
+  grid-template-areas: "header header header" "main main main" "main main main" "footer footer sede"; }
 
 .principal header {
   grid-area: header; }
@@ -98,7 +99,8 @@ footer {
 
 .principal section {
   grid-area: sede;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-right: 20px; }
 
 main .inicio {
   padding: 10px;
@@ -125,6 +127,9 @@ main .inicio {
   header {
     padding-left: 30px;
     padding-top: 20px; }
+  p .nuestraHistoria {
+    padding-left: 0px;
+    color: tomato; }
   .textoHistoria {
     width: 350px;
     padding: 10px;
@@ -140,31 +145,28 @@ main .inicio {
     width: 200px;
     padding: 0px; }
     .laEmpresa section .sede {
-      width: 500px;
+      width: 250px;
       padding-left: 40px; }
       .laEmpresa section .sede .caba {
         width: 180px;
         line-height: 15px; }
   .laEmpresa .redes {
     margin-left: 40px;
-    line-height: 20px; }
-  .laEmpresa .caba {
-    width: 200px;
-    gap: 1rem; } }
+    line-height: 20px; } }
 
 .laEmpresa {
   background-color: #8f8f8c;
   height: 600px;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 0.4fr 2fr 1fr 2fr;
-  grid-template-areas: "header header header"
- "main  main  main"
- "footer footer section"; }
-  .laEmpresa .nuestraHistoria .textoHistoria {
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px; }
+  grid-template-rows: 0.4fr 2fr 1fr 1fr;
+  grid-template-areas: "header header header" "main  main  main" "footer footer section"; }
+  .laEmpresa .nuestraHistoria {
+    padding-left: 10px; }
+    .laEmpresa .nuestraHistoria .textoHistoria {
+      color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px; }
   .laEmpresa .imagen {
     display: flex;
     justify-content: center;
@@ -186,14 +188,12 @@ main .inicio {
   grid-area: footer;
   padding: 20px;
   line-height: 40%;
-  width: 200px;
-   }
+  width: 200px; }
 
 .laEmpresa section {
   grid-area: section;
   padding-top: 20px;
-  width: 800px;
-   }
+  width: 250px; }
 
 @media screen and (min-width: 600px) {
   .laEmpresa .historia {
@@ -205,31 +205,36 @@ main .inicio {
     display: flex;
     justify-content: center; }
   .laEmpresa .imagen-uno {
-    display: none; } }
+    display: none; }
+  .laEmpresa section {
+    width: 600px; } }
 
 /* estilos Pagina Servicios */
 .service main {
   background-color: #8f8f8c; }
 
 .service footer .redes {
-  width: 150px;
-  margin-left: 20px; }
+  width: 200px;
+  margin-left: 20px;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
 .service footer section {
-  padding: 0px; }
+  padding-top: 10px;
+  width: 200px; }
+  .service footer section .sedeCentral {
+    padding-left: 20px; }
   .service footer section .sede {
     padding-top: 30px;
-    padding-left: 10px;
     margin: 0px;
-    width: 300px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px; }
+    width: 400px; }
     .service footer section .sede .caba {
-      width: 300px;
-      padding-left: 0px;
-      padding-right: 20px;
+      padding-left: 10px;
       margin: 0;
-      text-align: center; }
+      text-align: center;
+      width: 200px; }
+    .service footer section .sede .pichincha {
+      padding-left: 40px; }
 
 .servicios {
   display: grid;
@@ -253,29 +258,29 @@ main .inicio {
 
 .service section .sede {
   text-align: center;
-  width: 300px;
+  width: 400px;
   padding-left: 20px; }
   .service section .sede .caba {
     line-height: 1rem;
-    width: 150px; }
+    width: 200px; }
 
 @media screen and (min-width: 600px) {
   .servicios {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(2, 50%); } }
-
-.service footer {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: repeat 2, 50%; }
-
-.service section {
-  padding-top: 0px;
-  padding-left: 100px; }
-
-.service footer section div {
-  width: 200px; }
+    grid-template-rows: repeat(2, 50%); }
+  .service footer {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat 2, 50%; }
+  .service section {
+    padding-top: 0px; }
+  .service footer section {
+    width: 600px; }
+    .service footer section .sede {
+      width: 300px; }
+      .service footer section .sede .caba {
+        width: 280px; } }
 
 /*Estilos pagina clientes*/
 .clientesPrin {

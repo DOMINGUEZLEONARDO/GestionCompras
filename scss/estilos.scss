@@ -48,7 +48,7 @@ section{
     text-align: center;
     justify-content: end;
     background-color: $color-principal;
-    width: 600px;
+    
     .sede{
         text-align: center;
         color: black;
@@ -114,6 +114,14 @@ footer{
 .principal section {
     grid-area: sede;
     padding-top: 10px;
+    padding-right: 20px;
+    .sedeCentral{
+        @extend %barrio;
+        
+    }
+    p{
+      @extend %local;
+    }
     
     
 }
@@ -145,12 +153,22 @@ main .inicio{
 /*Estilos pagina la empresa*/
 
 @media (max-width:600px){
+   
     header{
        padding-left: 30px;
        padding-top: 20px;
        
        
     }
+    p{
+        
+        .nuestraHistoria{
+            padding-left: 0px;
+            color: tomato;
+        }
+    }
+    
+    
     
     
     .textoHistoria{
@@ -188,14 +206,23 @@ main .inicio{
                 
               
                 
-                .caba{
-                    width: 180px;
-                    line-height: 15px;
+            .caba{
+             width: 180px;
+             line-height: 15px;
                     
-                }
-                 
-               
             }
+            
+        
+             
+        }
+            
+           
+                
+         
+            
+    
+         
+               
      
         }
         .redes{
@@ -203,11 +230,7 @@ main .inicio{
             line-height: 20px;
 
         }
-     .caba{
-        width: 200px;
-        gap: 1rem;
-
-     }   
+       
     }
     
 }
@@ -226,7 +249,9 @@ main .inicio{
     "footer footer section";
 
     .nuestraHistoria{
-        @extend %formatoTitulo;
+       @extend %formatoTitulo;
+       padding-left: 10px;
+
         
 
 
@@ -276,6 +301,13 @@ main .inicio{
     grid-area: section;
    padding-top: 20px;
    width: 250px;
+.sedeCentral{
+    @extend %barrio;
+    
+}
+p{
+  @extend %local;
+}
  
    
   
@@ -302,6 +334,13 @@ main .inicio{
     .laEmpresa .imagen-uno{
         display: none;
     }
+    .laEmpresa{
+
+        section{
+            width:600px;
+    } 
+
+    }
        
     
 }
@@ -317,23 +356,43 @@ main .inicio{
         footer{
             
             .redes{
-                width: 150px;
+                width: 200px;
                 margin-left: 20px;
+                font-size: 13px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                
             }
 
             section{
-                padding: 0px;
+                padding-top: 10px;
+                width: 200px;
+                .sedeCentral{
+                    @extend %barrio;
+                    padding-left: 20px;
+                }
                 .sede{
                     padding-top: 30px;
                     margin: 0px;
-                    width: 250px;
+                    width: 400px;
                    
                     .caba{
-                        width: 200px;
-                        padding-left: 0px;
+                        
+                        padding-left: 10px;
                         margin: 0;
                         text-align: center;
+                        width: 200px;
+                        @extend %local;
+                        
                     }
+                    
+                     .pichincha{
+                            padding-left: 40px;
+                            @extend %local;
+                            
+                            
+                        }
+                       
+                    
                 }
             }
 
@@ -404,13 +463,14 @@ main .inicio{
             
             .sede{
                 text-align: center;
-                width: 300px;
+                width: 400px;
                 padding-left: 20px;
                 
                 .caba{
 
                     line-height: 1rem;
-                    width: 150px;
+                    width: 200px;
+
                     
                 }
                
@@ -435,29 +495,36 @@ main .inicio{
         
         }
     
-    }
-    .service footer{
-        display:  grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: repeat (2, 50%);
-
-    }
-    .service {
-
-        section{
-           padding-top: 0px;
-           padding-left: 100px;
-           
-       }
-    }
-    .service{
-        footer{
-            section{
-                div{
-                    width: 200px;
-                    
-                }
-            }
+        .service footer{
+           display:  grid;
+           grid-template-columns: repeat(2, 2fr);
+           grid-template-rows: repeat (2, 50%);
+   
+        }
+         .service {
+   
+           section{
+              padding-top: 0px;
+              
+              
+          }
+        }
+        .service{
+           footer{
+               section{
+                width: 600px;
+                
+                   
+                   .sede{
+                       width: 300px;
+                       .caba{
+                        
+                        width: 280px;
+                       }
+                       
+                   }
+               }
+           }
         }
     }
     
