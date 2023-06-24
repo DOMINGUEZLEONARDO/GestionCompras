@@ -48,6 +48,7 @@ section{
     text-align: center;
     justify-content: end;
     background-color: $color-principal;
+    width: 600px;
     .sede{
         text-align: center;
         color: black;
@@ -55,7 +56,8 @@ section{
         font-size: small;
         line-height: 40%;
         padding-top: 40px;
-        padding-right: 20px;
+        
+        
         .sedeCentral{
             color: white;
             font-weight: bold;
